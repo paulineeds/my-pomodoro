@@ -1,34 +1,10 @@
 import React from 'react';
 import './App.css';
+import Timer from './controllers/Timer/Timer.js'
+import Header from './controllers/Header/Header'
+import SetTimer from './controllers/SetTimer/SetTimer'
+import Controls from './controllers/Controls/Controls'
 const moment = require ('moment');
-
-const Header = () => <h1>Pomodoro</h1>
-
-const SetTimer = ({ type, value, handleClick }) => (
-   <div className='SetTimer'>
-    <div id={`${type}-label`}>{type === 'session' ? 'Session' : 'Break'}</div>
-      <div className='SetTimer-controls'>
-        <button id={`${type}-decrement`} onClick={() => handleClick(false, `${type}Value`)}>&darr;</button>
-        <h1 id={`${type}-length`}>{value}</h1>
-        <button id={`${type}-increment`} onClick={() => handleClick(true, `${type}Value`)}>&uarr;</button>
-      </div>
-  </div>
-)
-
- const Timer = ({ mode, time }) => (
-   <div className='Timer'>
-     <h1 id='Timer-label'>{mode === 'session' ? 'Session' : 'Break'}</h1>
-     <h1 id='time-left'>{time}</h1>
-   </div>
- ) 
-
-const Controls = ({ active, handleReset, handlePlayPause }) => (
-  <div className='Controls'> 
-    <button id='start_stop' onClick={handlePlayPause}>
-      {active ? <span>&#10074;&#10074;</span> : <span>&#9658;</span>}</button>
-    <button id='reset' onClick={handleReset}>&#8635;</button>
-  </div>
-)
 
 
 class App extends React.Component {

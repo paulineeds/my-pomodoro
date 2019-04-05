@@ -1,7 +1,8 @@
+import 
 
 body {
-  background-color:lightblue;
-
+  background-color:lightgrey;
+  font-family: 'Rationale', sans-serif;
 }
 
 .settings{
@@ -30,4 +31,10 @@ body {
 .Controls {
   display: flex;
   justify-content: center;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 72px;
 }
