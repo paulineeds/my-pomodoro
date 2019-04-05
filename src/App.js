@@ -70,12 +70,20 @@ class App extends React.Component {
     return (
       <div className="App">
        <Header />
-        <div className='settings'>
-          <SetTimer type='break' value={this.state.breakValue} handleClick={this.handleSetTimers}/>
-          <SetTimer type='session' value={this.state.sessionValue} handleClick={this.handleSetTimers}/>
+
+       <div className='blokje'>
+
+        <SetTimer type='session' value={this.state.sessionValue} handleClick={this.handleSetTimers}/>
+
+        <div className='timer'>
+          <Timer mode={this.state.mode} time={moment(this.state.time).format('mm:ss')}/>
+          <Controls active={this.state.active} handlePlayPause={this.handlePlayPause} handleReset={this.handleReset}/>
         </div>
-        <Timer mode={this.state.mode} time={moment(this.state.time).format('mm:ss')}/>
-        <Controls active={this.state.active} handlePlayPause={this.handlePlayPause} handleReset={this.handleReset}/>
+        
+        <SetTimer type='break' value={this.state.breakValue} handleClick={this.handleSetTimers}/>
+
+       </div>
+        
         <audio
         id='beep'
         src='https://s3-us-west-1.amazonaws.com/benjaminadk/Data+synth+beep+high+and+sweet.mp3'

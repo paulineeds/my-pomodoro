@@ -1,13 +1,17 @@
-import 
+
 
 body {
-  background-color:lightgrey;
+  background-color: #EFF2EF;
   font-family: 'Rationale', sans-serif;
 }
 
-.settings{
+.blokje{
   display: flex;
   justify-content: space-around;
+  background-color: #BAD7F2;
+  width: 700px;
+  height: 300px;
+  margin: auto;
 }
 
 .SetTimer {
@@ -37,4 +41,20 @@ body {
 h1 {
   text-align: center;
   font-size: 72px;
+  font-weight: lighter;
+}
+
+h2{
+  color:red;
+  font-size: 63px;
+  font-weight: lighter;
+}
+
+h3{
+  font-size: 90px;
+  font-weight: lighter;
+}
+
+button {
+  background-color: #BAD7F2;
 }
